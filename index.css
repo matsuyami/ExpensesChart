@@ -75,6 +75,10 @@ span {
   padding: 1.5rem 1rem; 
 }
 
+.stats h2 {
+  font-size: 1.25rem;
+}
+
 .data {
   flex-direction: column;
 }
