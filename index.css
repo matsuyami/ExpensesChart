@@ -67,10 +67,6 @@ span {
   font-weight: var(--fw-regular);
 }
 
-.balance-info h3 {
-  letter-spacing: 0.1rem;
-}
-
 .stats {
   background-color: var(--secondary-header-clr);
   border-radius: var(--br);
