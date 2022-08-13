@@ -1,4 +1,4 @@
-# Frontend Mentor - Product preview card component solution
+# Frontend Mentor - Expenses Chart Component Solution
 
 ## Overview
 A modern expenses chart component, made using HTML5, CSS3, and JavaScript. 
