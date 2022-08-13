@@ -1,6 +1,6 @@
 :root{
   --primary-clr: hsl(10, 79%, 65%);
-  --bar-hover-clr: hsl(186, 34%, 60%);
+  --selected-clr: hsl(186, 34%, 60%);
   --bg-clr: hsl(27, 66%, 92%);
 
   --header-clr: hsl(25, 47%, 15%);
@@ -43,21 +43,11 @@ h1, h2, h3, p {
   margin: 0;
 }
 
-ul {
-  font-size: 0.6875rem;
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin-top: var(--spacer-md);
-  justify-content: space-between;
-  color: var(--span-clr);
-  text-align: left;
-}
-
 section {
   display: flex;
   justify-content: space-between;
 }
+
 
 .balance {
   background-color: var(--primary-clr);
@@ -92,16 +82,36 @@ section {
   color: var(--header-clr);
 }
 
+.bar-chart {
+  font-size: 0.6875rem;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-top: var(--spacer-md);
+  justify-content: space-between;
+  color: var(--span-clr);
+  text-align: center;
+  transform: rotateX(180deg);
+}
+
+.col {
+  position: relative;
+  text-align: center;
+}
+
 .bar {
   background-color: var(--primary-clr);
   width: 2rem;
-  height: 5rem;
+ /* height: 5rem;*/
   border-radius: var(--br-sm);
   margin-bottom: var(--spacer-sm);
 }
 
 .day {
-  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: -1.5rem;
+  transform: rotateX(180deg);
 }
 
 hr {
@@ -109,6 +119,7 @@ hr {
   height: 2px;
   border: 0;
   background-color: var(--bg-clr);
+  margin-top: 3.5rem;
 }
 
 .total{
@@ -128,10 +139,10 @@ hr {
 
 .total-percent{
   position: absolute;
-  bottom: 0;
+  bottom: 0.25rem;
   right: 0;
   font-size: var(--font-size-sm);
-  text-align:right;
+  text-align: right;
 }
 
 .total-percent p{
@@ -159,4 +170,8 @@ footer {
     width: 2.35rem;
   }
 
+}
+
+.today {
+  background-color: var(--selected-clr);
 }
