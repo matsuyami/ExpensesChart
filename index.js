@@ -1,7 +1,10 @@
-const col = document.querySelectorAll('.col')
-const dayLabels = document.querySelectorAll('.day')
-const bars = document.querySelectorAll('.bar')
 const currDay = new Date().getDay()
+const filePath = './data.json'
+const numOfDaysInWeek = 7
+
+const col = document.querySelectorAll('.col')
+const bars = document.querySelectorAll('.bar')
+const dayLabels = document.querySelectorAll('.day')
 
 const dayToNum = {
   'sun': 0, 
@@ -14,7 +17,7 @@ const dayToNum = {
 }
 
 async function showGraph(){
-  const resp = await fetch('./data.json')
+  const resp = await fetch(filePath)
   const json = await resp.json()
   const days = json.map(data => data.day)
   const barHeights = json.map(data => data.amount)
@@ -26,7 +29,7 @@ async function showGraph(){
     dayLabels[index].appendChild(text)
     col[index].appendChild(dayLabels[index])
 
-    if(dayToNum[day] === currDay % 7) { 
+    if(dayToNum[day] === currDay % numOfDaysInWeek) { 
       bars[index].classList += ' today '
     } 
   }
