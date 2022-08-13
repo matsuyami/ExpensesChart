@@ -67,6 +67,10 @@ span {
   font-weight: var(--fw-regular);
 }
 
+.balance-info h1 {
+  font-size: 1.375rem;
+}
+
 .stats {
   background-color: var(--secondary-header-clr);
   border-radius: var(--br);
@@ -136,6 +140,7 @@ hr {
 }
 
 .total-info h2 {
+  font-size: 1.5rem;
   color: var(--header-clr);
 }
 
